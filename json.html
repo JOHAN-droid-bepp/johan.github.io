@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Inicio.css">
+    <body>
+        <header>
+            <div class="container">
+                <center><img src="img/images.png" alt="Logo de la tienda" class="logo"></center>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="json.html">JSON</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                        <li><a href="micuenta.html">Mi Cuenta</a></li>
+                        <li><a href="politicas.html">Políticas</a></li>
+                        <li><a href="promociones.html">Promociones</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </body>
+    <style>
+        body{
+            background-color: rgb(245, 245, 8);
+            margin: 0;
+            padding: 0;
+        }
+        .autos{
+            border-style: outset;
+            width: 120%;
+            height: 30rem;
+            padding: 1px;
+            margin: 1px;
+            background-color: cadetblue;
+        }
+        .boton-verde{
+            width: 1rem;
+            background-color: greenyellow;
+            border-style: ridge;
+            padding: 2px;
+            text-decoration: none;
+            border-radius: 1%;
+        }
+        .principal{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            row-gap: 5rem;
+            column-gap: 10rem;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .autitos{
+            display: grid;
+            margin: auto;
+            place-items: center;
+        }
+        p{
+            font-family: monospace;
+            font-size: smaller;
+        }
+        img{
+            width: 10rem;
+            height: 10rem;
+            border: ridge;
+        }
+        h1{
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 50rem;
+            text-align: center;
+        }
+        h2,h3{
+            font-size: 3rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 50;
+            text-align: center;
+        }
+        .datos{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>JSON OBJECT CREATION IN JAVASCRIPT</h1>
+    <h2>CARROS</h2>
+    <main class="principal">
+
+    </main>
+    <script>
+        const getCarros = async ()=>{
+            const response =await fetch("johan.json")
+            const data = await response.json();
+            let out=`<div class="principal">`
+            data.forEach((productos) => {
+                const tabla1 = document.querySelector('.autitos .datos')
+                out+=`
+                <div class="autos"><div class="autitos"><h3>${productos.modelo}</h3>
+                <img src="${productos.imagen}">
+                <div class="datos"><p>Produccion:${productos.produccion}</p>
+                <p>Millaje:${productos.millaje}</p>
+                <p><a href="${productos.enlace}" class="boton boton-verde">Ver Producto</a></p>
+                </div></div></div>
+                `
+            })
+            document.querySelector('.principal').innerHTML=out
+        }
+        getCarros()
+    </script>
+</body>
+</html>

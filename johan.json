@@ -1,0 +1,44 @@
+[
+    {
+        "modelo":"ArenaGorro",
+        "produccion":2010,
+        "millaje":12000,
+        "imagen":"img/gorro.jpg",
+        "enlace": "productos.html"
+    },
+    {
+        "modelo":"mallaProfesional",
+        "produccion":2010,
+        "millaje":12000,
+        "imagen":"img/malla.jpg",
+        "enlace": "productos.html"
+    },
+    {
+        "modelo":"lentes",
+        "produccion":2010,
+        "millaje":12000,
+        "imagen":"img/lentes.jpg",
+        "enlace": "productos.html"
+    },
+    {
+        "modelo":"MallaMujer",
+        "produccion":2010,
+        "millaje":12000,
+        "imagen":"img/mallamujer.jpg",
+        "enlace": "productos.html"
+    },
+    {
+        "modelo":"Patas de Rana",
+        "produccion":2010,
+        "millaje":12000,
+        "imagen":"img/patasderana.jpg",
+        "enlace": "productos.html"
+    },
+    {
+        "modelo":"malla",
+        "produccion":2010,
+        "millaje":12000,
+        "imagen":"img/malla.jpg",
+        "enlace": "productos.html"
+    }
+]

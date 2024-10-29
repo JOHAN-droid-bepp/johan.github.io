@@ -1,0 +1,146 @@
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contenedor centralizado */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+    background: #000000;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .logo {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
+.hero {
+    background: url(img/piscina-olimpica-medidas.png) no-repeat center center/cover;
+    color: #000000;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background: #c0392b;
+}
+
+/* Sección de productos */
+.products, .promo {
+    padding: 20px 0;
+}
+
+.products h2, .promo h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: calc(33% - 20px);
+    text-align: center;
+    padding: 10px;
+}
+
+.product-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.product-item h3 {
+    margin: 10px 0;
+}
+
+.btn-secondary {
+    background: #34db42;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-secondary:hover {
+    background: #29afb9;
+}
+
+/* Pie de página */
+footer {
+    background: #ecda30;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
